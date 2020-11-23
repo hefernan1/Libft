@@ -6,7 +6,7 @@
 /*   By: hefernan <hefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/16 18:07:23 by hefernan          #+#    #+#             */
-/*   Updated: 2020/08/16 18:22:27 by hefernan         ###   ########.fr       */
+/*   Updated: 2020/11/20 16:44:33 by hefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ char    *ft_strjoin(char const *s1, char const *s2)
 int     main(void)
 {
     char s1[15] = "henrique";
-    char s2[15] = "Lise";
+    char s2[15] = "aaaaaa";
 
     printf("%s\n", ft_strjoin(s1, s2));
 }

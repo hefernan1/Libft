@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hefernan <hefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/20 15:22:58 by hefernan          #+#    #+#             */
-/*   Updated: 2020/11/20 16:04:07 by hefernan         ###   ########.fr       */
+/*   Created: 2020/11/23 16:01:03 by hefernan          #+#    #+#             */
+/*   Updated: 2020/11/23 16:01:24 by hefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int         ft_lstsize(t_list *lst)
+t_list  *ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *))
 {
-    int     i;
-    t_list  *tmp;
-
-    tmp = lst;
-    i = 0;
-    while (tmp)
-    {
-        tmp = tmp->next;
-        i++;
-    }
-    return (i);
+    
 }
