@@ -12,61 +12,56 @@
 
 #include "libft.h"
 
-int     compt_nb(int nb)
+int			compt_nb(int nb)
 {
-    long int nbr;
-    int i;
+	long int	nbr;
+	int		i;
 
-    i = 0;
-    nbr = nb;
-    if (nbr == 0)
-        i = 1;
-    if (nbr < 0)
-    {
-        i++;
-        nbr = -nbr;
-    }
-    while (nbr > 0)
-    {
-        nbr = nbr / 10;
-        i++;
-    }
-    return (i);
+	i = 0;
+	nbr = nb;
+	if (nbr == 0)
+		i = 1;
+	if (nbr < 0)
+	{
+		i++;
+		nbr = -nbr;
+	}
+	while (nbr > 0)
+	{
+		nbr = nbr / 10;
+		i++;
+	}
+	return (i);
 }
 
-char    *ft_itoa(int n)
+char			*ft_itoa(int n)
 {
-    long int nbr;
-    int i;
-    char *str;
-    int len;
+	long int	nbr;
+	int		i;
+	char		*str;
+	int		len;
 
-    nbr = n;
-    i = 0;
-    len = compt_nb(n);
-    if (!(str = malloc(sizeof(char) * (len + 1))))
-        return (NULL);
-    str[len] = '\0';
-    if (nbr == 0)
-    {
-        str[0] = '0';
-        return (str);
-    }
-    if (nbr < 0)
-    {
-        str[0] = '-';
-        nbr = -nbr;
-    }
-    while (nbr != 0)
-    {
-        str[len - 1] = (nbr % 10) + '0';
-        nbr = nbr / 10;
-        len--;
-    }
-    return (str);
-}
-
-int main(int ac, char **av)
-{
-    printf("%s", ft_itoa(atoi(av[1])));
+	nbr = n;
+	i = 0;
+	len = compt_nb(n);
+	if (!(str = malloc(sizeof(char) * (len + 1))))
+		return (NULL);
+	str[len] = '\0';
+	if (nbr == 0)
+	{
+		str[0] = '0';
+		return (str);
+	}
+	if (nbr < 0)
+	{
+		str[0] = '-';
+		nbr = -nbr;
+	}
+	while (nbr != 0)
+	{
+		str[len - 1] = (nbr % 10) + '0';
+		nbr = nbr / 10;
+		len--;
+	}
+	return (str);
 }

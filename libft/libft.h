@@ -6,7 +6,7 @@
 /*   By: hefernan <hefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/03 19:22:51 by hefernan          #+#    #+#             */
-/*   Updated: 2020/11/30 00:26:27 by hefernan         ###   ########.fr       */
+/*   Updated: 2020/12/16 15:56:50 by hefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int     ft_isprint(int c);
 int     ft_toupper(int c);
 int     ft_tolower(int c);
 int     ft_atoi(const char *str);
-char    *ft_itoa(int n);
+char    *ft_itoa(int n); // norm 
 char    *ft_strdup(const char *s1);
 char    *ft_strchr(const char *s, int c);
 char    *ft_strrchr(const char *s, int c);

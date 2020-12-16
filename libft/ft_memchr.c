@@ -12,26 +12,18 @@
 
 #include "libft.h"
 
-void   *ft_memchr(const void *s, int c, size_t n)
+void		*ft_memchr(const void *s, int c, size_t n)
 {
-  size_t i;
-  char *s1;
+	size_t	i;
+	char	*s1;
 
-  i = 0;
-  s1 = (void *)s;
-  while (i < n && s1[i])
-  {
-    if (s1[i] == c)
-      return ((void *)s + i);
-    i++;
-  }
-  return (NULL);
-}
-
-int main(void)
-{
-  char tab[50] = "lise";
-
-  printf("%s\n", ft_memchr(tab, 101, 8));
-  printf("%s", memchr(tab, 101, 8));
+	i = 0;
+	s1 = (void *)s;
+	while (i < n && s1[i])
+	{
+		if (s1[i] == c)
+			return ((void *)s + i);
+		i++;
+	}
+	return (NULL);
 }
