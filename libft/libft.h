@@ -6,7 +6,7 @@
 /*   By: hefernan <hefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/03 19:22:51 by hefernan          #+#    #+#             */
-/*   Updated: 2020/12/16 15:56:50 by hefernan         ###   ########.fr       */
+/*   Updated: 2020/12/16 18:49:33 by hefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@ int     ft_isprint(int c);
 int     ft_toupper(int c);
 int     ft_tolower(int c);
 int     ft_atoi(const char *str);
-char    *ft_itoa(int n); // norm 
+char    *ft_itoa(int n); // norm
 char    *ft_strdup(const char *s1);
 char    *ft_strchr(const char *s, int c);
 char    *ft_strrchr(const char *s, int c);
 char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
-char    *ft_strjoin(char const *s1, char const *s2);
+char    *ft_strjoin(char const *s1, char const *s2); //norm
 char    *ft_substr(char const *s, unsigned int start, size_t len);
 char    *ft_strtrim(char const *s1, char const *set);
 size_t  ft_strlen(const char *s);

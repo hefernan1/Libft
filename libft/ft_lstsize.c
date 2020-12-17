@@ -6,15 +6,15 @@
 /*   By: hefernan <hefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 15:22:58 by hefernan          #+#    #+#             */
-/*   Updated: 2020/11/20 16:04:07 by hefernan         ###   ########.fr       */
+/*   Updated: 2020/12/17 16:48:49 by hefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_lstsize(t_list *lst)
-{		
-	int	i;
+int			ft_lstsize(t_list *lst)
+{
+	int		i;
 	t_list	*tmp;
 
 	tmp = lst;

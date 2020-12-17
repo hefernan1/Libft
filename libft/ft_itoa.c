@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-int			compt_nb(int nb)
+int				compt_nb(int nb)
 {
-	long int	nbr;
-	int		i;
+	long int		nbr;
+	int			i;
 
 	i = 0;
 	nbr = nb;
@@ -34,12 +34,12 @@ int			compt_nb(int nb)
 	return (i);
 }
 
-char			*ft_itoa(int n)
+char				*ft_itoa(int n)
 {
-	long int	nbr;
-	int		i;
-	char		*str;
-	int		len;
+	long int		nbr;
+	int			i;
+	char			*str;
+	int			len;
 
 	nbr = n;
 	i = 0;

@@ -6,15 +6,15 @@
 /*   By: hefernan <hefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/16 18:07:23 by hefernan          #+#    #+#             */
-/*   Updated: 2020/11/20 16:44:33 by hefernan         ###   ########.fr       */
+/*   Updated: 2020/12/17 16:50:39 by hefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strcpy(char *dst, const char *src)
+static char		*ft_strcpy(char *dst, const char *src)
 {
-	int	i;
+	int			i;
 
 	i = 0;
 	while (src[i])
@@ -26,10 +26,10 @@ char		*ft_strcpy(char *dst, const char *src)
 	return (dst);
 }
 
-char		*ft_strcat(char *s1, const char *s2)
+static char		*ft_strcat(char *s1, const char *s2)
 {
-	int	i;
-	int	j;
+	int			i;
+	int			j;
 
 	i = 0;
 	j = 0;
@@ -45,10 +45,10 @@ char		*ft_strcat(char *s1, const char *s2)
 	return (s1);
 }
 
-char		*ft_strjoin(char const *s1, char const *s2)
+char			*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*str;
-	int	len;
+	char		*str;
+	int			len;
 
 	len = ft_strlen(s1) + ft_strlen(s2) + 1;
 	if (!(str = malloc(sizeof(char) * len)))
