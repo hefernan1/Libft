@@ -12,16 +12,16 @@
 
 #include "libft.h"
 
-t_list  *ft_lstlast(t_list *lst)
+t_list		*ft_lstlast(t_list *lst)
 {
-    t_list *tmp;
+	t_list	*tmp;
 
-    tmp = lst;
-    if(!(lst = malloc(sizeof(t_list))))
-        return(NULL);
-    while (tmp)
-    {
-        tmp = tmp->next;
-    }
-    return (tmp);
+	tmp = lst;
+	if (!(lst = malloc(sizeof(t_list))))
+		return (NULL);
+	while (tmp)
+	{
+		tmp = tmp->next;
+	}
+	return (tmp);
 }

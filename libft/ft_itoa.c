@@ -6,16 +6,16 @@
 /*   By: hefernan <hefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/11 11:03:42 by hefernan          #+#    #+#             */
-/*   Updated: 2020/08/13 00:54:24 by hefernan         ###   ########.fr       */
+/*   Updated: 2020/12/17 18:10:41 by hefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int				compt_nb(int nb)
+static int			compt_nb(int nb)
 {
 	long int		nbr;
-	int			i;
+	int				i;
 
 	i = 0;
 	nbr = nb;
@@ -37,9 +37,9 @@ int				compt_nb(int nb)
 char				*ft_itoa(int n)
 {
 	long int		nbr;
-	int			i;
+	int				i;
 	char			*str;
-	int			len;
+	int				len;
 
 	nbr = n;
 	i = 0;
