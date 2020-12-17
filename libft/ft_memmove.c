@@ -6,13 +6,13 @@
 /*   By: hefernan <hefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 00:20:40 by hefernan          #+#    #+#             */
-/*   Updated: 2020/08/10 01:04:23 by hefernan         ###   ########.fr       */
+/*   Updated: 2020/12/17 22:09:04 by hefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void   *ft_memmove(void *dst, const void *src, size_t len)
+void  *ft_memmove(void *dst, const void *src, size_t len)
 {
 
 }

@@ -6,7 +6,7 @@
 /*   By: hefernan <hefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/11 11:03:42 by hefernan          #+#    #+#             */
-/*   Updated: 2020/12/17 18:10:41 by hefernan         ###   ########.fr       */
+/*   Updated: 2020/12/17 22:26:00 by hefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,21 +37,16 @@ static int			compt_nb(int nb)
 char				*ft_itoa(int n)
 {
 	long int		nbr;
-	int				i;
 	char			*str;
 	int				len;
 
 	nbr = n;
-	i = 0;
 	len = compt_nb(n);
 	if (!(str = malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	str[len] = '\0';
 	if (nbr == 0)
-	{
 		str[0] = '0';
-		return (str);
-	}
 	if (nbr < 0)
 	{
 		str[0] = '-';
