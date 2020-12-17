@@ -6,7 +6,7 @@
 /*   By: hefernan <hefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/09 21:48:26 by hefernan          #+#    #+#             */
-/*   Updated: 2020/08/17 15:51:11 by hefernan         ###   ########.fr       */
+/*   Updated: 2020/12/17 22:32:24 by hefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void		ft_bzero(void *s, size_t n)
 
 	s1 = s;
 	i = 0;
+	if (n == 0)
+		return ;
 	while (i < n)
 	{
 		s1[i] = 0;
