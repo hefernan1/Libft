@@ -6,15 +6,15 @@
 /*   By: hefernan <hefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/17 00:10:06 by hefernan          #+#    #+#             */
-/*   Updated: 2020/08/17 00:48:11 by hefernan         ###   ########.fr       */
+/*   Updated: 2020/12/18 01:13:14 by hefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     intermilan(char c, char *str)
+static int	intermilan(char c, char *str)
 {
-    int i;
+    int		i;
 
     i = 0;
     while (str[i])
@@ -26,11 +26,11 @@ int     intermilan(char c, char *str)
     return (-1);
 }
 
-char    *ft_strtrim(char const *s1, char const *set)
+char		*ft_strtrim(char const *s1, char const *set)
 {
-    int dubut;
-    int fin;
-    char *str;
+    int		dubut;
+    int		fin;
+    char	*str;
 
     dubut = 0;
     fin = ft_strlen(s1);
