@@ -6,7 +6,7 @@
 /*   By: hefernan <hefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 16:23:19 by hefernan          #+#    #+#             */
-/*   Updated: 2020/11/20 16:41:59 by hefernan         ###   ########.fr       */
+/*   Updated: 2020/12/28 18:18:31 by hefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,15 @@
 
 void		ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*tmp;
+	t_list	*list;
 
-	tmp = *lst;
-	if (*lst)
+	if (!*lst || !new)
 	{
-		while (tmp)
-		{
-			tmp = tmp->next;
-			tmp->next = new;
-		}
-	}
-	else
 		*lst = new;
+		return ;
+	}
+	list = *lst;
+	while (list->next)
+		list = list->next;
+	list->next = new;
 }

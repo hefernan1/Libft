@@ -6,7 +6,7 @@
 /*   By: hefernan <hefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/03 22:07:00 by hefernan          #+#    #+#             */
-/*   Updated: 2020/08/10 01:07:01 by hefernan         ###   ########.fr       */
+/*   Updated: 2020/12/28 17:33:13 by hefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	len;
 
 	i = 0;
+	if (!dst || !src)
+		return (0);
 	len = ft_strlen(src);
 	while (src[i] && i + 1 < dstsize)
 	{

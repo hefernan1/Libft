@@ -6,7 +6,7 @@
 /*   By: hefernan <hefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/16 18:07:23 by hefernan          #+#    #+#             */
-/*   Updated: 2020/12/17 16:50:39 by hefernan         ###   ########.fr       */
+/*   Updated: 2020/12/28 17:54:22 by hefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ char			*ft_strjoin(char const *s1, char const *s2)
 	char		*str;
 	int			len;
 
+	if (!s1 || !s2)
+		return (NULL);
 	len = ft_strlen(s1) + ft_strlen(s2) + 1;
 	if (!(str = malloc(sizeof(char) * len)))
 		return (NULL);

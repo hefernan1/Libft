@@ -6,14 +6,13 @@
 /*   By: hefernan <hefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/03 19:22:51 by hefernan          #+#    #+#             */
-/*   Updated: 2020/12/20 23:19:32 by hefernan         ###   ########.fr       */
+/*   Updated: 2020/12/27 22:34:31 by hefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h> // retirer à la fin
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>

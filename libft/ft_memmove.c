@@ -6,7 +6,7 @@
 /*   By: hefernan <hefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 00:20:40 by hefernan          #+#    #+#             */
-/*   Updated: 2020/12/20 23:08:06 by hefernan         ###   ########.fr       */
+/*   Updated: 2020/12/28 00:30:58 by hefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,17 @@
 
 void		*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
-	char	*dst2;
-	char	*src2;
-
-	i = 0;
-	dst2 = dst;
-	src2 = (void*)src;
-	if (src2 < dst2)
+	if (!dst && !src)
+		return (NULL);
+	if (dst >= src)
 	{
-		i++;
-		while (i <= len)
+		while (len > 0)
 		{
-			dst2[len - i] = src2[len - i];
-			i++;
+			((char *)dst)[len - 1] = ((char *)src)[len - 1];
+			len--;
 		}
 	}
 	else
-	{
-		while (i < len)
-		{
-			dst2[i] = src2[i];
-			i++;
-		}
-	}
+		ft_memcpy(dst, src, len);
 	return (dst);
 }

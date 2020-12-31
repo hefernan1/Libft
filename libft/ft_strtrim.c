@@ -6,7 +6,7 @@
 /*   By: hefernan <hefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/17 00:10:06 by hefernan          #+#    #+#             */
-/*   Updated: 2020/12/20 23:14:52 by hefernan         ###   ########.fr       */
+/*   Updated: 2020/12/28 17:55:52 by hefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ char		*ft_strtrim(char const *s1, char const *set)
 	int		fin;
 
 	dubut = 0;
+	if (!s1 || !set)
+		return (NULL);
 	fin = ft_strlen(s1);
 	while (intermilan(s1[dubut], (char *)set) >= 0)
 		dubut++;

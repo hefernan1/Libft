@@ -6,7 +6,7 @@
 /*   By: hefernan <hefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 15:49:13 by hefernan          #+#    #+#             */
-/*   Updated: 2020/12/01 16:34:09 by hefernan         ###   ########.fr       */
+/*   Updated: 2020/12/28 18:07:02 by hefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@ void		ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*tmp;
 
-	tmp = *lst;
 	if (!lst)
 		return ;
-	while (tmp != NULL)
+	while (*lst)
 	{
-		del(tmp->content);
-		free(tmp);
-		tmp->next;
+		tmp = (*lst)->next;
+		del((*lst)->content);
+		free(*lst);
+		*lst = tmp;
 	}
 	*lst = NULL;
 }

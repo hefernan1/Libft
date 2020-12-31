@@ -6,7 +6,7 @@
 /*   By: hefernan <hefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 15:12:00 by hefernan          #+#    #+#             */
-/*   Updated: 2020/11/20 15:22:11 by hefernan         ###   ########.fr       */
+/*   Updated: 2020/12/28 18:03:31 by hefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (!lst || !new || !*lst)
-		return ;
-	lst->next = *lst;
+	new->next = *lst;
 	*lst = new;
 }
