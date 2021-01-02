@@ -6,7 +6,7 @@
 /*   By: hefernan <hefernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/09 17:37:59 by hefernan          #+#    #+#             */
-/*   Updated: 2020/12/28 00:51:05 by hefernan         ###   ########.fr       */
+/*   Updated: 2021/01/02 15:30:09 by hefernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,17 @@
 
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	size_t			i;
-	unsigned char	*s1;
-	unsigned char	*s2;
+	unsigned char	*d;
+	unsigned char	*s;
 
-	if (!dst && !src)
-		return (dst);
-	s1 = (unsigned char *)src;
-	s2 = (unsigned char *)dst;
-	i = -1;
-	while (++i < n && s1[i] != (unsigned char)c)
-	{
-		s2[i] = (unsigned char)s1[i];
-	}
-	if (s1[i] == (unsigned char)c)
-	{
-		s2[i] = (unsigned char)s1[i];
-		return (&dst[i + 1]);
-	}
-	return (NULL);
+	s = (unsigned char *)src;
+	if (!n)
+		return (0);
+	d = (unsigned char *)dst;
+	*d = *s++;
+	while (*d++ != (unsigned char)c && --n)
+		*d = *s++;
+	if (*(d - 1) == (unsigned char)c)
+		return ((void *)d);
+	return (0);
 }
